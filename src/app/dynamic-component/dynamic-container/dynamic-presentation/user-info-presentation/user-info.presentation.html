@@ -1,0 +1,47 @@
+<div role="document" class="modal-dialog modal-sm">
+    <div class="modal-content">
+        <div class="modal-body text-center">
+            <form class="floating-form" [formGroup]="customerFormGroup">
+                <div class="row">
+                    <div class="form-group col-md-6 col-12 col-lg-6">
+                        <input type="text" class="form-control" formControlName="firstName" autoFocus />
+                        <label class="floating-form-label">Name</label>
+
+                    </div>
+                    <div class="form-group col-md-6 col-12 col-lg-6">
+                        <input type="text" class="form-control" formControlName="company" />
+                        <label class="floating-form-label">Company</label>
+
+                    </div>
+                    <div class="form-group col-md-6 col-12 col-lg-6">
+                        <input type="text" class="form-control" formControlName="group" />
+                        <label class="floating-form-label">Group</label>
+
+                    </div>
+                    <div class="form-group col-md-6 col-12 col-lg-6">
+                        <input type="text" class="form-control" formControlName="email" />
+                        <label class="floating-form-label">Email</label>
+
+                    </div>
+                    <div class="form-group col-md-6 col-12 col-lg-6">
+                        <input type="text" class="form-control" #dp="bsDatepicker" bsDatepicker
+                            formControlName="createdAt" [bsConfig]="bsConfig" placement="bottom left">
+                        <label class="floating-form-label">CreatedAt</label>
+                    </div>
+                    <div class="form-group col-md-6 col-12 col-lg-6">
+                        <input type="text" class="form-control" formControlName="productNo" />
+                        <label class="floating-form-label">ProductNo</label>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button class="btn btn-flat-primary mr-1" (click)="cancel();">Cancel</button>
+                        <button class="btn btn-primary m-2" (click)="saveCustomer();">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
